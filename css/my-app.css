@@ -1,0 +1,267 @@
+/*
+   statusbar-overlay sets the background color for the overlay. Black text is the default when the statusbar plugin is not added. When the
+   statusbar plugin is added, it also adds default setting to make the content white via:
+
+       <preference name="StatusBarStyle" value="lightcontent"/>
+
+   Setting the background color to black will allow the default light content (white text/icons) to show on it. The statusbar plugin is included
+   in the config.xml file and will be added by the CLI when you build locally.
+
+   See https://github.com/apache/cordova-plugin-statusbar
+*/
+
+/* main background color */
+.page {
+	background-color: #eef1f3;
+}
+
+/* get rid of panel shadow */
+body.with-panel-left-reveal .views, body.with-panel-right-reveal .views {
+    box-shadow: none;
+    border-left: 1px solid #333;
+    /*box-shadow: 0 0 20px rgba(0,0,0,.2);*/
+}
+/* Speed dial and floating buttun styling */
+.speed-dial-buttons a, .floating-button {
+    border-radius: 30%;
+    width: 3em;
+    height: 3em;
+}
+
+/* popover arrow style grabbed from iOS */
+.popover-angle {
+  width: 26px;
+  height: 26px;
+  position: absolute;
+  left: -26px;
+  top: 0;
+  z-index: 100;
+  overflow: hidden;
+}
+.popover-angle:after {
+  content: ' ';
+  background: rgba(255, 255, 255, 0.95);
+  width: 26px;
+  height: 26px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 3px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.popover-angle.on-left {
+  left: -26px;
+}
+.popover-angle.on-left:after {
+  left: 19px;
+  top: 0;
+}
+.popover-angle.on-right {
+  left: 100%;
+}
+.popover-angle.on-right:after {
+  left: -19px;
+  top: 0;
+}
+.popover-angle.on-top {
+  left: 0;
+  top: -25px;
+}
+.popover-angle.on-top:after {
+  left: 0;
+  top: 19px;
+}
+.popover-angle.on-bottom {
+  left: 0;
+  top: 100%;
+}
+.popover-angle.on-bottom:after {
+  left: 0;
+  top: -19px;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.card-header{
+    background-color: rgb(142, 201, 248);
+    font-size: 18px;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.card-header span {
+    text-shadow: 0.5px 0.5px 1px rgba(34, 34, 34, 0.8);
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+ .person-card .card-header {
+    display: block;
+    padding: 10px;
+    padding-bottom: 15px;
+    background-color: #eee;
+    color: #222;
+  }
+  .person-card .person-avatar {
+    float: left;
+  }
+  .person-card .person-avatar img { 
+    border-radius: 10%;
+    width: 48px;
+    height: 48px;
+  }
+  .person-card .person-name {
+    margin-left: 44px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .person-card .person-slogan {
+    margin-left: 44px;
+    font-size: 13px;
+    color: #8e8e93;
+  }
+  .person-card .card-footer {
+    background: #fafafa;
+  }
+  .person-card .card-footer a {
+    color: #81848b;
+    font-weight: 500;
+  }
+  .person-card .card-content img {
+    display: block;
+  }
+  .person-card .card-content-inner {
+    padding: 15px 10px;
+  }  
+
+.statusbar-overlay {
+    background: #000000;
+}
+
+.swiper-container {
+	width: 100%;
+	height: 100%;
+}
+
+.swiper-slide, .swiper-slide img  {
+	max-height: 100% ;
+	max-width: 100% ;
+
+}
+
+.swiper-slide-shadow-top, .swiper-slide-shadow-bottom {
+	_width: 100%;
+}
+.swiper-slide {
+	_height: 90% !important;
+}
+.p-cap {
+	display: block;
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	height: 3em;
+	background-color: rgba(0, 0, 0, 0.64);
+	color: #fff;
+}
+
+ .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+/* no ui customization */
+
+.noUi-target {
+    background: #90cbf9;
+    border-radius: 0 ;
+    border: 0 ;
+    box-shadow: none;
+}
+
+.noUi-connect {
+    background: #2196f3;
+    box-shadow: none;
+}
+
+.noUi-horizontal {
+    height: 8px;
+    margin-top: 2.2em;
+}
+
+.noUi-horizontal .noUi-handle {
+    width: 26px;
+    height: 26px;
+    left: -12px;
+    top: -9px;
+}
+
+
+.noUi-horizontal .noUi-tooltip {
+    background-color: #90cbf9;
+    color: #020c14;
+    border-radius: 3px 3px 9px 9px;
+    text-shadow: 1px 0px 0px #1e7ecb;
+}
+
+.noUi-tooltip-bottom.noUi-horizontal .noUi-tooltip {
+    bottom: -170%;
+    border-radius: 9px 9px 3px 3px;
+
+}
+
+.noUi-handle {
+    border: 1px solid #1e80ce;
+    border-radius: 10px;
+    background: #2196f3;
+    box-shadow: none;
+}
+
+.noUi-handle:before, .noUi-handle:after {
+    display: none;
+}
+
+.noUi-value-sub {
+    color: #aaa;
+    font-size: 13px;
+    top: 6px;
+}
+
+.noUi-pips .first-value {
+  left: 5% !important;
+}
+
+.noUi-pips .last-value {
+  left: 95% !important;
+}
+
+.q-cell {
+	height: 3.9em;
+}
+
+.q-row {
+	padding-bottom: 1.5em;
+}
+
+.q-label {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* fix 4 fontaweseome */
+i.fa { margin-left: 0 !important; }
